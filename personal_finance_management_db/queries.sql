@@ -39,7 +39,7 @@ WHERE account_id = (SELECT account_id FROM accounts WHERE account_name = 'ABC Ba
 
 -- Retrieve transactions within a specific date range
 SELECT * FROM transactions
-WHERE transaction_date BETWEEN '2024-07-01' AND '2024-07-31';
+WHERE transaction_date BETWEEN '2024-08-01' AND '2024-08-31';
 
 -- Retrieve transactions within a specific category
 SELECT * FROM transactions
@@ -51,12 +51,12 @@ WHERE transaction_type = 'Expense';
 
 -- Show financial summary (total income and expenses) for a specific month
 SELECT * FROM monthly_financial_summary
-WHERE month = '2024-07';
+WHERE month = '2024-08';
 
 -- Show financial summary for a specific category and month
 SELECT * FROM category_summary
 WHERE category_id = (SELECT category_id FROM categories WHERE name = 'Groceries')
-AND month = '2024-07';
+AND month = '2024-08';
 
 -- List all categories
 SELECT * FROM categories;
