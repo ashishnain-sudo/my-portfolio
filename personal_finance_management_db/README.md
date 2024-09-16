@@ -2,7 +2,7 @@
 
 By Ashish Nain
 
-Video overview: <URL HERE>
+Video overview: https://youtu.be/mV24w59nhuM
 
 ## Scope
 
@@ -83,7 +83,9 @@ A `TRIGGER`- `after_transaction_insert_update_balance` has also been defined to 
 
 ### Relationships
 
-In this section you should include your entity relationship diagram and describe the relationships between the entities in your database.
+The below entity relationship diagram describes the relationships among the entities in the database.
+
+![ER Diagram](diagram.png)
 
 As detailed by the diagram:
 
