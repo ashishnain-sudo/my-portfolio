@@ -89,7 +89,6 @@ The below entity relationship diagram describes the relationships among the enti
 
 ![ER Diagram](diagram.png)
 
-<img src="[Ipersonal_finance_management_db/diagram.png](https://github.com/ashishnain-sudo/my-portfolio/blob/972d83a8440b1ff30505e0791a91a7248dcbb413/personal_finance_management_db/diagram.png)" width="400" height="400"/>
 As detailed by the diagram:
 
 * An account can have zero to many transactions. A transaction is associated with one and only one account.
