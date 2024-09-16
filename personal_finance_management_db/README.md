@@ -10,7 +10,7 @@ By Ashish Nain
 
 The purpose of the database is to manage and track financial transactions, budget plans, and account balances for a user. It provides a way to record income and expense transactions, categorize them, and compare actual spending against budgeted amounts.
 
-### Included in Scope
+## Included in Scope
 * User's financial accounts (e.g., bank accounts, credit cards, cash)
 * Financial transactions (income and expenses)
 * Transaction categories (e.g., Groceries, Entertainment)
@@ -30,7 +30,7 @@ This database will support:
 * Retrieve transactions by various filters (date range, account, category, transaction type)
 * Trigger to automatically update account balance after a transaction is inserted
 
-### Beyond the Scope
+## Beyond the Scope
 * Tracking of transaction timestamps (exact time of day for transactions)
 * Integration with external financial systems
 * Loans, interest rates, credit limits, recurring trasactions, multi-currency support, multi-user support
@@ -39,11 +39,11 @@ This database will support:
 
 Entities are captured in SQLite tables with the following schema.
 
-### Entities
+## Entities
 
 The database includes the following entities:
 
-#### Accounts
+### Accounts
 
 The `accounts` table includes:
 
@@ -52,14 +52,14 @@ The `accounts` table includes:
 * `account_type`: This column specifies the type of account (e.g., Bank Account, Credit Card, Cash) as `TEXT`, which is appropriate for categorical data.
 * `balance`: This column specifies the balance of the account as a `REAL` number. The `NOT NULL` constraint ensures every account has a balance, and it has `DEFAULT` value of `0.0`.
 
-#### Categories
+### Categories
 
 The `categories` table includes:
 
 * `category_id`: This column specifies the unique ID for the category as an `INTEGER`. This column has the `PRIMARY KEY` constraint applied to ensure each category has a unique identifier.
 * `name`: This column specifies the name of the category as `TEXT`, appropriate for descriptive names. The `NOT NULL` constraint ensures every category has a name, and the `UNIQUE` constraint ensures no two categories have the same name.
 
-#### Transactions
+### Transactions
 
 The `transactions` table includes:
 
@@ -71,7 +71,7 @@ The `transactions` table includes:
 * `category_id`: This column specifies the ID of the related category as an `INTEGER`. This column is optional, allowing transactions without a category. A `FOREIGN KEY` constraint references the `category_id` in the `categories` table, maintaining referential integrity.
 * `description`: This column specifies a description of the transaction as `TEXT`, providing additional details about the transaction.
 
-#### Budget Plans
+### Budget Plans
 
 The `budget_plans` table includes:
 
@@ -83,7 +83,7 @@ The `budget_plans` table includes:
 
 A `TRIGGER`- `after_transaction_insert_update_balance` has also been defined to automatically update account balance after a transaction is inserted
 
-### Relationships
+## Relationships
 
 The below entity relationship diagram describes the relationships among the entities in the database.
 
@@ -97,13 +97,13 @@ As detailed by the diagram:
 
 # Optimizations
 
-### Indexes
+## Indexes
 
 * Index on `transaction_date` in `transactions` table .This index speeds up queries that filter or sort transactions by date, which is a common operation when viewing transactions over time or generating monthly summaries.
 * Composite Index on `account_id` and `transaction_date` in `transactions` table.  This index optimizes searches that filter transactions by account and date, which is useful for viewing account-specific transaction history.
 * Composite Index on `category_id` and `transaction_date` in `transactions` table. This index enhances the performance of queries filtering by category and date, important for generating category-based reports and summaries.
 
-### Views
+## Views
 * Monthly Financial Summary View: This view provides a summarized overview of income and expenses per month, useful for quick financial performance analysis.
 * Budget vs. Actual Spending View: This view compares the budgeted amount against the actual spending per category and month, aiding in budget management and analysis.
 * Recent Transactions View: This view provides a quick look at the 10 most recent transactions, which is helpful for monitoring recent financial activity.
@@ -116,9 +116,9 @@ As detailed by the diagram:
 * Budget planning is currently restricted to monthly periods. The design lacks flexibility to support other budget periods such as weekly or yearly budgets
 * The design does not support loans, credit limits, interest rates, recurring transactions, multiple users, multiple currencies, or detailed financial goal planning.
 
-## Schema file
+# Schema file
 https://github.com/ashishnain-sudo/my-portfolio/blob/6f796acc1e6958d1456072d28b23b6aa9c3d2e00/personal_finance_management_db/schema.sql
 
-## Sample queries
+# Sample queries
 
 https://github.com/ashishnain-sudo/my-portfolio/blob/6f796acc1e6958d1456072d28b23b6aa9c3d2e00/personal_finance_management_db/queries.sql
