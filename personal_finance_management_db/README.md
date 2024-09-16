@@ -2,6 +2,9 @@
 
 By Ashish Nain
 
+[![Video Overview](https://img.youtube.com/vi/mV24w59nhuM/0.jpg)](https://www.youtube.com/watch?v=mV24w59nhuM)
+
+
 ## Scope
 
 The purpose of the database is to manage and track financial transactions, budget plans, and account balances for a user. It provides a way to record income and expense transactions, categorize them, and compare actual spending against budgeted amounts.
@@ -83,7 +86,7 @@ A `TRIGGER`- `after_transaction_insert_update_balance` has also been defined to 
 
 The below entity relationship diagram describes the relationships among the entities in the database.
 
-![ER Diagram](diagram.png)
+![ER Diagram](diagram.png){: width="300px" height="200px"}
 
 As detailed by the diagram:
 
