@@ -6,7 +6,7 @@ By Ashish Nain
 [![Video Overview](https://img.youtube.com/vi/mV24w59nhuM/0.jpg)](https://www.youtube.com/watch?v=mV24w59nhuM)
 
 
-## Scope
+# Scope
 
 The purpose of the database is to manage and track financial transactions, budget plans, and account balances for a user. It provides a way to record income and expense transactions, categorize them, and compare actual spending against budgeted amounts.
 
@@ -18,7 +18,7 @@ The purpose of the database is to manage and track financial transactions, budge
 
 Out of scope are elements like loans, interest rates, credit limits, multi-currency support, multi-user support, recurring transactions management.
 
-## Functional Requirements
+# Functional Requirements
 
 This database will support:
 
@@ -95,7 +95,7 @@ As detailed by the diagram:
 * A category can have zero to many transactions. A transaction can be associated with no (zero) category or only one category.
 * A budget plan is associated with one and only one category. A category can have zero to many budget plans. But the `budget_plan` table has `UNIQUE` constraint applied to the combination of `category_id` and `budget_month`. Therefore, there can be zero or only one budget plan for every month.
 
-## Optimizations
+# Optimizations
 
 ### Indexes
 
@@ -109,7 +109,7 @@ As detailed by the diagram:
 * Recent Transactions View: This view provides a quick look at the 10 most recent transactions, which is helpful for monitoring recent financial activity.
 * Category Summary View: This view summarizes transactions by category and month, facilitating detailed analysis of spending and income per category.
 
-## Limitations
+# Limitations
 
 * The current design restricts transaction types to 'Income' and 'Expense'. If additional types, such as 'Transfer', are needed, the schema would require modifications to accommodate these new transaction types.
 * The current design only tracks the date of transactions, not the exact time. This limits the ability to precisely order transactions that occur on the same day or to analyze intra-day spending patterns.
