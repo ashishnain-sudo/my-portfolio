@@ -2,7 +2,7 @@
 
 By Ashish Nain
 
-Video overview: https://youtu.be/mV24w59nhuM
+[![Video overview](http://img.youtube.com/vi/mV24w59nhuM/0.jpg)]([http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE "Video Title"](https://youtu.be/mV24w59nhuM))
 
 ## Scope
 
