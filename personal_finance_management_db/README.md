@@ -115,3 +115,10 @@ As detailed by the diagram:
 * The current design only tracks the date of transactions, not the exact time. This limits the ability to precisely order transactions that occur on the same day or to analyze intra-day spending patterns.
 * Budget planning is currently restricted to monthly periods. The design lacks flexibility to support other budget periods such as weekly or yearly budgets
 * The design does not support loans, credit limits, interest rates, recurring transactions, multiple users, multiple currencies, or detailed financial goal planning.
+
+## Schema file
+https://github.com/ashishnain-sudo/my-portfolio/blob/6f796acc1e6958d1456072d28b23b6aa9c3d2e00/personal_finance_management_db/schema.sql
+
+## Sample queries
+
+https://github.com/ashishnain-sudo/my-portfolio/blob/6f796acc1e6958d1456072d28b23b6aa9c3d2e00/personal_finance_management_db/queries.sql
