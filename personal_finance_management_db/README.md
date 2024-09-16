@@ -2,6 +2,7 @@
 
 By Ashish Nain
 
+### Video Overview
 [![Video Overview](https://img.youtube.com/vi/mV24w59nhuM/0.jpg)](https://www.youtube.com/watch?v=mV24w59nhuM)
 
 
@@ -86,8 +87,9 @@ A `TRIGGER`- `after_transaction_insert_update_balance` has also been defined to 
 
 The below entity relationship diagram describes the relationships among the entities in the database.
 
-![ER Diagram](diagram.png){: width="300px" height="200px"}
+![ER Diagram](diagram.png)
 
+<img src="Ipersonal_finance_management_db/diagram.png" width="100" height="100"/>
 As detailed by the diagram:
 
 * An account can have zero to many transactions. A transaction is associated with one and only one account.
