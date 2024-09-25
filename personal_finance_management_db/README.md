@@ -2,10 +2,6 @@
 
 By Ashish Nain
 
-### Video Overview
-[![Video Overview](https://img.youtube.com/vi/mV24w59nhuM/0.jpg)](https://www.youtube.com/watch?v=mV24w59nhuM)
-
-
 # Scope
 
 The purpose of the database is to manage and track financial transactions, budget plans, and account balances for a user. It provides a way to record income and expense transactions, categorize them, and compare actual spending against budgeted amounts.
